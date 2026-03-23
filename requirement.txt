@@ -1,0 +1,5 @@
+marimo
+nupack
+biotite
+matplotlib
+numpy
