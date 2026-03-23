@@ -3,3 +3,4 @@ nupack
 biotite
 matplotlib
 numpy
+ipywidgets
