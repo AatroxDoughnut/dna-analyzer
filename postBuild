@@ -1,0 +1,14 @@
+#!/bin/bash
+set -e  # 遇到错误立即退出
+
+# 更新系统包索引并安装 ViennaRNA（biotite 绘图所需）
+sudo apt-get update
+sudo apt-get install -y vienna-rna
+
+# 安装 Python 依赖（如果 requirements.txt 已存在，这里只需安装额外的系统依赖）
+# 注意：pip 安装会在 Binder 构建时自动执行 requirements.txt，所以这里不需要重复安装。
+# 但如果想手动安装，可以取消注释：
+# pip install --no-cache-dir -r requirements.txt
+
+# 可选：将 marimo 脚本转换为 Jupyter 笔记本（便于在 Binder 中打开）
+# marimo export ipynb marimo-2.2.2.1.py --output notebook.ipynb
